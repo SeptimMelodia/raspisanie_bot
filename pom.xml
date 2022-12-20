@@ -10,7 +10,7 @@
 	</parent>
 	<groupId>com.github.schedule</groupId>
 	<artifactId>schedule-tgbot</artifactId>
-	<version>0.0.1-SNAPSHOT</version>
+	<version>0.1.0-SNAPSHOT</version>
 	<name>Schedule TGbot</name>
 	<description>Bot for easy viewing of work schedule</description>
 	<properties>
