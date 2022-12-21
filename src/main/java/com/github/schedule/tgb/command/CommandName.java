@@ -2,7 +2,8 @@ package com.github.schedule.tgb.command;
 
 public enum CommandName {
     START("/start"),
-    STOP("/stop");
+    STOP("/stop"),
+    HELP("/help");
 
     private final String commandName;
 
