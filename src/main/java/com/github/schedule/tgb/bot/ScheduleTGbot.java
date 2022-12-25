@@ -40,7 +40,7 @@ public class ScheduleTGbot extends TelegramLongPollingBot {
             if (message.startsWith(COMMAND_PREFIX)) {
                 String commandIdentifier = message.split(" ")[0].toLowerCase();
 
-                commandContainer.retriveCommand(commandIdentifier).execute(update);
+                commandContainer.retrieveCommand(commandIdentifier).execute(update);
             } else {
                 // реализация процесса не входящих в команды
             }
