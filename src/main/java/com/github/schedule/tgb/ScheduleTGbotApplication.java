@@ -5,10 +5,7 @@ import org.springframework.boot.autoconfigure.SpringBootApplication;
 
 @SpringBootApplication
 public class ScheduleTGbotApplication {
-
 	public static void main(String[] args) {
-
 		SpringApplication.run(ScheduleTGbotApplication.class, args);
 	}
-
 }
