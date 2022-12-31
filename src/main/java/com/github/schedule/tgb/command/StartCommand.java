@@ -1,6 +1,7 @@
 package com.github.schedule.tgb.command;
 
 import com.github.schedule.tgb.sersvice.SendBotMessageService;
+import com.github.schedule.tgb.sersvice.TelegramUserService;
 import org.telegram.telegrambots.meta.api.objects.Update;
 
 public class StartCommand implements Command{

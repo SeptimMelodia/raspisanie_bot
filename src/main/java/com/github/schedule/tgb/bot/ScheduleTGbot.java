@@ -1,13 +1,13 @@
 package com.github.schedule.tgb.bot;
 
 import com.github.schedule.tgb.command.CommandContainer;
+import com.github.schedule.tgb.repository.TelegramUserRepository;
 import com.github.schedule.tgb.sersvice.SendBotMessageService;
+import com.github.schedule.tgb.sersvice.TelegramUserService;
 import org.springframework.beans.factory.annotation.Value;
 import org.springframework.stereotype.Component;
 import org.telegram.telegrambots.bots.TelegramLongPollingBot;
-import org.telegram.telegrambots.meta.api.methods.send.SendMessage;
 import org.telegram.telegrambots.meta.api.objects.Update;
-import org.telegram.telegrambots.meta.exceptions.TelegramApiException;
 
 @Component
 public class ScheduleTGbot extends TelegramLongPollingBot {
@@ -18,8 +18,10 @@ public class ScheduleTGbot extends TelegramLongPollingBot {
     @Value("${bot.token}")
     private String token;
     private final CommandContainer commandContainer;
+    private final TelegramUserService telegramUserService;
 
-    public ScheduleTGbot() {
+    public ScheduleTGbot(TelegramUserRepository telegramUserRepository, TelegramUserService telegramUserService) {
+        this.telegramUserService = telegramUserService;
         this.commandContainer = new CommandContainer(new SendBotMessageService(this));
     }
 
