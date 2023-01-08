@@ -12,7 +12,7 @@ import javax.persistence.Table;
 @Table(name="tg_user")
 public class TelegramUser {
     @Id
-    @Column(name = "tg_user")
+    @Column(name = "chat_id")
     private String chatId;
 
     @Column(name = "active")
