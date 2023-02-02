@@ -18,7 +18,7 @@ public class TelegramUser {
     @Column(name = "active")
     private boolean active;
 
-    /*@Column(name = "tg_name")
+    @Column(name = "tg_name")
     private String tgName;
 
     @Column(name = "irl_name")
@@ -29,7 +29,7 @@ public class TelegramUser {
 
     @Column(name = "password")
     private String password;
-*/
+
     public void setChatId(String chatId) {
         this.chatId = chatId;
     }
@@ -38,7 +38,7 @@ public class TelegramUser {
         this.active = active;
     }
 
-/*    public void setTgName(String tgName) {
+    public void setTgName(String tgName) {
         this.tgName = tgName;
     }
 
@@ -53,7 +53,7 @@ public class TelegramUser {
     public void setPassword(String password) {
         this.password = password;
     }
-*/
+
     public String getChatId() {
         return chatId;
     }
@@ -62,7 +62,7 @@ public class TelegramUser {
         return active;
     }
 
-/*    public String getTgName() {
+    public String getTgName() {
         return tgName;
     }
 
@@ -77,6 +77,5 @@ public class TelegramUser {
     public String getPassword() {
         return password;
     }
-    
- */
+
 }

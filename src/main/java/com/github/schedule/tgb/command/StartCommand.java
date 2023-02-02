@@ -20,6 +20,10 @@ public class StartCommand implements Command{
     @Override
     public void execute(Update update) {
         String chatId = update.getMessage().getChatId().toString();
+        String tgName = update.getMessage().getChat().getUserName();
+        String irlName = "a";
+        String login = "a";
+        String password = "";
 
         telegramUserService.findByChatId(chatId).ifPresentOrElse(
                 user -> {
@@ -30,6 +34,7 @@ public class StartCommand implements Command{
                     TelegramUser telegramUser = new TelegramUser();
                     telegramUser.setActive(true);
                     telegramUser.setChatId(chatId);
+                    telegramUser.setTgName(tgName);
                     telegramUserService.save(telegramUser);
                 }
         );
